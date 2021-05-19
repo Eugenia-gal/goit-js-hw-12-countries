@@ -24,10 +24,8 @@ const refs = {
 
 refs.searchInputEl.addEventListener('input', debounce(onEnterCountryName, 500));
 
-function onEnterCountryName(e) {
-  const name = e.target.value;
-
-  // showCountriesInfo('hidden');
+function onEnterCountryName(event) {
+  const name = event.target.value;
 
   if (!name) {
     showCountriesInfo('hidden');
