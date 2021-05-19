@@ -1,0 +1,34 @@
+<h2 class='country-card__title'>
+  {{name}}
+</h2>
+<div class='flbx-overlaw'>
+  <div class='country-card__thumb'>
+    <ul class='country-card__list'>
+      <li class='country-card__list-item'>
+        <span class='country-card__list-item-name'>
+          Capital:
+        </span>
+        {{capital}}
+      </li>
+      <li class='country-card__list-item'>
+        <span class='country-card__list-item-name'>
+          Population:
+        </span>
+        {{population}}
+      </li>
+      <li class='country-card__list-item'>
+        <span class='country-card__list-item-name'>
+          Languages:
+        </span>
+        <ul class='country-card__lang-list'>
+          {{#each languages}}
+            <li class='country-card__lang-list-item'>
+              {{this.name}}
+            </li>
+          {{/each}}
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <img src={{flag}} alt="flag of {{name}}" class='flag' width='180' />
+</div>
